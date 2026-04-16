@@ -1,3 +1,5 @@
+import basicLightbox from 'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/+esm';
+
 const images = [
   {
     preview:
@@ -89,10 +91,9 @@ gallery.addEventListener("click", (e) => {
   const img = e.target.closest("img");
   if (!img) return;
 
-  const instance = basicLightbox.create(
+const instance = basicLightbox.create(
   `<img src="${img.dataset.source}" alt="${img.alt}">`
 );
 
   instance.show();
 });
-// width="360" height="200"
